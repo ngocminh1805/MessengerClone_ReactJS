@@ -1,13 +1,14 @@
 import * as React from 'react';
 import './header.css';
-import Searchbar from '../search_bar/searchbar'
-import { Container, Row, Col } from 'reactstrap'
+import avatar from '../../assets/image.jpg'
 
-class Header extends React.PureComponent {
+
+class Header extends React.Component {
     render() {
         return (
-            <div>
-                <h3>Đây là header</h3>
+            <div className = 'container_header'>
+                <img className = 'avatar' src = {avatar}/>
+                <span className = 'userName_header'> Minh Bé Tí </span>
             </div>
         )
     }

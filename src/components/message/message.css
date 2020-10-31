@@ -1,0 +1,25 @@
+.container{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.message_container{
+    background-color: #e6e7e7;
+    border-radius:16px;
+    display: flex;
+    flex: content;
+    width: fit-content;
+    padding: 5px 10px 5px 10px;
+}
+
+.message_container > p {
+    margin: auto;
+}
+
+.userName{
+    font-size: 12px;
+    color: #c1c1c2;
+}

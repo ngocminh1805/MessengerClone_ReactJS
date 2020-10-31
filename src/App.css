@@ -1,12 +1,29 @@
 .container {
   display: flex;
+  max-height: 1080px;
 }
 .col1 {
   flex: 0 0 25%;
-  border: 3px solid;
+  border-right: 1px solid #CCD0D5;
+
 }
 .col2 {
   flex: 0 0 75%;
+}
+
+.row2{
+  display: flex;
+}
+.col3{
+  border: 1px solid #CCD0D5;
+  border-left: 0px;
+  flex: 2;
+
+}
+.col4{
+  border: 1px solid #CCD0D5;
+  border-left: 0px;
+  flex: 1;
 }
 
 @media screen and (max-width: 1024px) {

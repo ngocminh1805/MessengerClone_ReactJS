@@ -23,7 +23,7 @@ class BoxchatItem extends React.Component<Props>{
 
         return (
             <div className={'boxchatItem'}>
-                <div className='avatar'>
+                <div className='avatar_boxchat'>
                     <img src={Image} height={50} width={50} />
                 </div>
                 <div className={'content'} >

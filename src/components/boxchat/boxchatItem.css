@@ -7,11 +7,11 @@
   padding: 10px;
   height: 70px;
 }
-.avatar {
+.avatar_boxchat {
   height: 50;
   width: 50;
 }
-.avatar > img {
+.avatar_boxchat > img {
     border-radius: 50%;
 }
 

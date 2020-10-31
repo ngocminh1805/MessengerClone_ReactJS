@@ -1,13 +1,18 @@
 import * as React from 'react';
+import './searchbar.css'
 
 class SearchBar extends React.PureComponent {
     render() {
         return (
             <div className='container'>
-                <img 
-                height = '40'
-                width = '40'
-                src = 'https://cdn.jpegmini.com/user/images/slider_puffin_before_mobile.jpg'/>
+                <span className='input'>
+                    <label className='searchbar'>
+                        <input className='inputtext'
+                               type='text'
+                               placeholder = 'Tìm Kiếm'
+                               spellCheck = "false"/>
+                    </label>
+                </span>
             </div>
         )
     }
