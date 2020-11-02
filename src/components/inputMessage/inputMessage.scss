@@ -1,0 +1,34 @@
+@import '../../mySass.scss';
+
+.inputMessage_container{
+    height: 52px;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    align-items: stretch;
+}
+.inputMessage_icon{
+    @extend .localColor;
+    height: 24px;
+    width: 24px;
+    margin: 4px;
+}
+.input_message{
+    display: flex;
+    flex: 1 ;
+    border: none;
+    background-color: #F2F3F5;
+    border-radius: 16px;  
+    padding-left: 20px;
+    padding-right: 5px;  
+    
+    
+}
+.input_text{
+    background-color: #F2F3F5;
+    outline: 0px;
+    border: none;
+    padding-left: 10px;
+    padding-right: 20px;
+    flex: 1;
+}

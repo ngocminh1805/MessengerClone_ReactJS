@@ -1,12 +1,14 @@
 import * as React from 'react';
-import './searchbar.css'
+import './searchbar.scss'
+import {BsSearch} from 'react-icons/all'
 
 class SearchBar extends React.PureComponent {
     render() {
         return (
-            <div className='container'>
+            <div className='container_searchbar'>
                 <span className='input'>
                     <label className='searchbar'>
+                        <BsSearch/>
                         <input className='inputtext'
                                type='text'
                                placeholder = 'Tìm Kiếm'

@@ -1,0 +1,22 @@
+.dropdownTitle{
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, .34);
+    font-size: 13px;
+    padding: 14px;
+    flex: 1;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+}
+
+.dropdown-container{
+    border-bottom:1px solid #CCD0D5 ;
+    
+  }
+
+.dropdown-item{
+    font-size: 13px;
+    padding: 10px 14px 10px 14px ;
+}

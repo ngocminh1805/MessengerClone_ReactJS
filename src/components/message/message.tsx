@@ -1,5 +1,6 @@
 import * as React from 'react';
-import './message.css'
+import './message.scss'
+import '../../mySass.scss'
 
 interface Props {
     isMine: boolean
@@ -9,14 +10,22 @@ interface Props {
 }
 
 interface State {
-    style: any
-   
-
+    background:string
 }
 
 class Message extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props)
+
+        this.state = {
+            background:''
+        }
+    }
+
+    componentDidMount(){
+        if(!this.props.isMine){
+            this.setState({background: '#e6e7e7'})
+        }
     }
 
 
@@ -28,7 +37,7 @@ class Message extends React.Component<Props, State> {
                     {isMine? 'Bạn' : userName}
                 </span>
                 <div className='message_container' style={{
-                    backgroundColor: isMine ? '#0099ff' : ' #e6e7e7',
+                    backgroundColor: this.state.background,
                     color: isMine ? '#fff' : '#000'
                 }}>
                     <p>

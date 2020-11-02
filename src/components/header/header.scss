@@ -1,3 +1,5 @@
+@import '../../mySass.scss';
+
 .container_header {
   height: 56px;
   width: 100%;
@@ -18,4 +20,11 @@
   color: black;
   font-weight: bold;
   margin-left: 16px;
+}
+
+.header_icon{
+  @extend .localColor;
+  height: 28px;
+  width: 28px;
+  margin: 10px;
 }

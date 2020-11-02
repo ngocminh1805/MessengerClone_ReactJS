@@ -1,6 +1,6 @@
 import * as React from 'react';
 import BoxchatItem from './boxchatItem'
-import './boxchatList.css'
+import './boxchatList.scss'
 
 
 class BoxchatList extends React.Component {

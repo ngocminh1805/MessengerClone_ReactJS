@@ -1,4 +1,4 @@
-.container{
+.container_searchbar{
     margin-top: 16px;
     margin-bottom: 16px;
     align-items: center;
@@ -7,6 +7,7 @@
 .input{
     display: inline-block;
     width: 100%;
+    outline: 0px;
 }
 
 .searchbar{
@@ -14,10 +15,12 @@
     color: #606770;
     background-color: #F2F3F5;;
     width: 100%;
-    border-radius: 8px;
+    border-radius: 24px;
     align-items: center;
     justify-content: center;
     padding: 10px;
+    display: flex;
+    padding-left: 20px;
 }
 
 .searchbar>input{
@@ -25,15 +28,19 @@
    border: none;
    margin-left: 10px;
    width: 95%;
+   outline: 0px;
 
 }
 
 @media screen and (max-width: 1024px) {
-    .container{
-        display: none;
-    }
+    
 }
 
 @media screen and (max-width: 768px) {
-
+    .container_searchbar{
+        display: none;
+    }
+    .avatar_boxchat{
+        padding: 10px;
+    }
 }

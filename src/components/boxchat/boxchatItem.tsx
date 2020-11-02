@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './boxchatItem.css'
+import './boxchatItem.scss'
 import Image from '../../assets/image.jpg'
 import moment from 'moment'
 
@@ -19,7 +19,7 @@ class BoxchatItem extends React.Component<Props>{
 
     render() {
 
-        const { id, userName, message, time } = this.props
+        const {userName, message, time } = this.props
 
         return (
             <div className={'boxchatItem'}>
