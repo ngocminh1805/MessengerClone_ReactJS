@@ -26,8 +26,17 @@
   flex: 1;
   padding: 0px;
   overflow-y:scroll ;
+}
 
-  
+.btn{
+  position: absolute;
+  top: 10px;
+  right: 50%;
+  background-color:  #CCD0D5;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  border: 1px solid #888;
 }
 
 /* custom all scroll bar  */

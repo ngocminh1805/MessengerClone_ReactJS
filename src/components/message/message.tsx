@@ -7,10 +7,11 @@ interface Props {
     userName: string
     message:string,
     id:number
+    color?:string
 }
 
 interface State {
-    background:string
+    background?:string
 }
 
 class Message extends React.Component<Props, State> {
@@ -23,7 +24,10 @@ class Message extends React.Component<Props, State> {
     }
 
     componentDidMount(){
-        if(!this.props.isMine){
+        if(this.props.isMine){
+            this.setState({background:this.props.color})
+            
+        }else{
             this.setState({background: '#e6e7e7'})
         }
     }
@@ -31,13 +35,15 @@ class Message extends React.Component<Props, State> {
 
     render() {
         const { isMine, userName } = this.props
+        console.log('message item color', this.props.color);
+        
         return (
             <div className='container' style={{ alignItems: isMine ? "flex-end" : "flex-start" }}>
                 <span className='userName'>
                     {isMine? 'Bạn' : userName}
                 </span>
                 <div className='message_container' style={{
-                    backgroundColor: this.state.background,
+                    backgroundColor: isMine? this.props.color: '#e6e7e7'  ,
                     color: isMine ? '#fff' : '#000'
                 }}>
                     <p>

@@ -2,7 +2,11 @@ import * as React from 'react';
 import './inputMessage.scss'
 import { IoMdAddCircle, RiStickyNoteFill, RiFileGifFill, BsImageFill,AiTwotoneLike, FaSmile } from 'react-icons/all'
 
-class InputMessage extends React.Component {
+interface Props{
+    color?:string
+}
+
+class InputMessage extends React.Component<Props> {
 
     onclick = () => {
         alert('onclick')
@@ -10,7 +14,7 @@ class InputMessage extends React.Component {
 
     render() {
         return (
-            <div className='inputMessage_container'  >
+            <div className='inputMessage_container' style = {{color:this.props.color}} >
                 <div style={{ marginRight: 10 }}>
                     <IoMdAddCircle className='inputMessage_icon' onClick = {this.onclick}/>
                     <RiFileGifFill className='inputMessage_icon' onClick = {this.onclick}/>

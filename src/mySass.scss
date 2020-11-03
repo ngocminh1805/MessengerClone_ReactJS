@@ -1,8 +1,23 @@
-$localcolor: #ff5100;
+$localcolor: #ff0000;
+$color2:  #B6DCB5;  
 
 .localColor{
     color: $localcolor;
 }
 .backgroud{
     background-color: $localcolor;
+}
+
+@media screen and (max-width: 1024px) {
+    .localColor{
+        color: $color2;
+    }
+    .backgroud{
+        background-color: $color2;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+  
 }

@@ -6,9 +6,9 @@
     display: flex;
     padding: 10px;
     align-items: stretch;
+    @extend .localColor; 
 }
-.inputMessage_icon{
-    @extend .localColor;
+.inputMessage_icon{  
     height: 24px;
     width: 24px;
     margin: 4px;
