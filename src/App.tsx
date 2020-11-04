@@ -8,8 +8,7 @@ import ListMessage from './components/message/listMessage';
 import ProfileBox from './components/profileBox/profilebox';
 import Dropbox from './components/dropbox/Dropbox';
 import InputMessage from './components/inputMessage/inputMessage';
-import Chart from './components/chart/chart';
-
+import MyChart from './components/chart/chart';
 
 interface Props {
 
@@ -31,6 +30,45 @@ class App extends Component<Props, State> {
     }
   }
 
+  // data test chart
+
+  data = {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [
+      {
+        label: 'My First dataset',
+        backgroundColor: 'rgba(255,99,132,0.2)',
+        borderColor: 'rgba(255,99,132,1)',
+        borderWidth: 1,
+        hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+        hoverBorderColor: 'rgba(255,99,132,1)',
+        data: [65, 59, 80, 81, 56, 55, 40]
+      }
+    ]
+  }
+
+  data2 = {
+    labels: [
+      'Red',
+      'Blue',
+      'Yellow'
+    ],
+    datasets: [{
+      data: [300, 50, 100],
+      backgroundColor: [
+        '#FF6384',
+        '#36A2EB',
+        '#FFCE56'
+      ],
+      hoverBackgroundColor: [
+        '#FF6384',
+        '#36A2EB',
+        '#FFCE56'
+      ]
+    }]
+  };
+
+  // get random color
   getRandomColor = () => {
     var letters = '0123456789ABCDEF';
     var color = '#';
@@ -40,31 +78,45 @@ class App extends Component<Props, State> {
     return color;
   }
 
+  // click to change color
+
   onClick = () => {
     this.setState({ color: this.getRandomColor() })
   }
 
+
+  // render screen
   render() {
     console.log('color', this.state.color);
-    
+
     return (
       <Container fluid style={{ height: 500 }}>
         <Row>
+
+          {/* column left */}
           <Col className='col1' style={{ height: window.innerHeight }}>
             <SearchBar />
             <BoxchatList />
           </Col>
+
+          {/* column center and rright*/}
           <Col className='col2'>
-            <Header color = {this.state.color} />
+
+            {/* message header bar */}
+            <Header color={this.state.color} />
             <Row className='row2'>
+
+              {/* column center */}
               <Col className='col3' style={{ height: window.innerHeight - 56 }}>
                 <div style={{ height: window.innerHeight - 112, overflow: "hidden", overflowY: "scroll" }}>
-                  <ListMessage color = {this.state.color} />
+                  <ListMessage color={this.state.color} />
                 </div>
                 <div>
-                  <InputMessage color = {this.state.color} />
+                  <InputMessage color={this.state.color} />
                 </div>
               </Col>
+
+              {/* column right */}
               <Col className='col4' style={{ height: window.innerHeight - 56 }}>
                 <ProfileBox />
                 <Dropbox title='hành động khác' />
@@ -72,7 +124,23 @@ class App extends Component<Props, State> {
                 <Dropbox title='quyền riêng tư & hỗ trợ' />
                 <Dropbox title='tệp được chia sẻ' />
                 <Dropbox title='ảnh được chia sẻ' />
-                <Chart/>
+                <MyChart
+                  id='chart1'
+                  type='bar'
+                  data={this.data}
+                  options={{
+                    maintainAspectRatio: false
+                  }}
+                  height={200}
+                  width={200}
+                />
+                <MyChart
+                  id='chart2'
+                  type='pie'
+                  data={this.data2}
+                  height={400}
+                  width={400}
+                />
               </Col>
             </Row>
           </Col>
