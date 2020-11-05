@@ -9,6 +9,10 @@ import ProfileBox from './components/profileBox/profilebox';
 import Dropbox from './components/dropbox/Dropbox';
 import InputMessage from './components/inputMessage/inputMessage';
 import MyChart from './components/chart/chart';
+import YourChart from './components/chart/newchart';
+import DatePicker from './components/datepicker/datePicker';
+import Accordion from './components/accordion/Accordion';
+
 
 interface Props {
 
@@ -124,15 +128,14 @@ class App extends Component<Props, State> {
                 <Dropbox title='quyền riêng tư & hỗ trợ' />
                 <Dropbox title='tệp được chia sẻ' />
                 <Dropbox title='ảnh được chia sẻ' />
-                <MyChart
+                {/* <MyChart
                   id='chart1'
                   type='bar'
                   data={this.data}
                   options={{
                     maintainAspectRatio: false
                   }}
-                  height={200}
-                  width={200}
+                 
                 />
                 <MyChart
                   id='chart2'
@@ -140,7 +143,18 @@ class App extends Component<Props, State> {
                   data={this.data2}
                   height={400}
                   width={400}
-                />
+                /> */}
+                <YourChart
+                id='chart1'
+                type='bar'
+                data={this.data}
+                options={{
+                  maintainAspectRatio: false
+                }}
+                 />
+
+                <DatePicker/>
+                <Accordion/>
               </Col>
             </Row>
           </Col>
