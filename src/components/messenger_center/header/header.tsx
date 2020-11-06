@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './header.scss';
-import avatar from '../../assets/image.jpg'
+import avatar from '../../../assets/image.jpg'
 import { IoIosCall, BsCameraVideoFill, BsInfoCircleFill } from 'react-icons/all'
 
 interface Props{

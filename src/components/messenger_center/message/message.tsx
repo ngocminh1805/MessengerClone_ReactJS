@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './message.scss'
-import '../../mySass.scss'
+import '../../../mySass.scss'
 
 interface Props {
     isMine: boolean

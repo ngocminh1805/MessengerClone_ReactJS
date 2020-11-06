@@ -34,7 +34,6 @@ class Accordion extends React.Component<Props> {
                 console.log('item child_first', panel.style);
                 console.log('item child_last', panel.style);
 
-
                 if (panel.style.display == 'block') {
                     panel.style.display = 'none'}
                    

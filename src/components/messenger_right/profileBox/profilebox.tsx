@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './profilebox.scss'
-import avatar from '../../assets/image.jpg'
+import avatar from '../../../assets/image.jpg'
 
 class ProfileBox extends React.Component{
 
